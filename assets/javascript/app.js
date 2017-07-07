@@ -85,7 +85,7 @@ function fullGame() {
     for(var i = 0; i < questions[questionNum].options.length ; i++){
 
 
-      options = $("<button class='questionOps btn btn-default btn-lg btn-block' id=" + i + "> " + questions[questionNum].options[optionNum] + "</button>");
+      options = $("<button class='questionOps btn btn-block' id=" + i + "> " + questions[questionNum].options[optionNum] + "</button>");
 
       optionNum ++;
 
@@ -147,7 +147,7 @@ function timeOutLoss() {
 
   questionNum ++;
 
-  $("#options").html("INCORRECT!");
+  $("#options").empty();
 
   $("#loseGif").show();
 
@@ -158,7 +158,7 @@ function timeOutLoss() {
           console.log(size);
           $loseGif.css('width', size + '%');
           $loseGif.css('height', size + '%');
-          $loseGif.css("top", "60px");
+          $loseGif.css("top", "100px");
           size++;
           setTimeout(grow, 10, size);
       }
@@ -169,25 +169,7 @@ function timeOutLoss() {
   nextQuestion();
 }
 
-// function answerTimer () {
-//
-//   answerCountdown = setInterval(fiveSeconds,1000);
-//
-//   function fiveSeconds() {
-//
-//     if (answerCounter === 0) {
-//
-//       clearInterval(answerCountdown);
-//
-//     }
-//     else {
-//
-//       answerCounter --;
-//
-//       $("#timer2").html("Time Left 00:" + answerCounter);
-//     }
-//
-//   }
+
 
 
 
@@ -225,17 +207,6 @@ function nextQuestion() {
 
 //-----======================================================    GAME LOGIC   ===================================================//
 
-
-//start the game by clicking the start button
-
-// $(document).ready(function() {
-//         var obj = document.createElement("audio");
-//         obj.src="assets/images/friendSong.mp3";
-//         obj.volume=0.10;
-//         obj.autoPlay=false;
-//         obj.preLoad=true;
-//
-//         });
 
 $("#startBtn").click(function(){
 
@@ -276,7 +247,9 @@ $(document).on("click", ".questionOps", function(){
 
     correct ++;
 
-    $("#options").html("CORRECT!");
+    $("#question").html("CORRECT!");
+
+    $("#options").empty();
 
     $("#winGif").show();
 
@@ -287,7 +260,7 @@ $(document).on("click", ".questionOps", function(){
 		        console.log(size);
 		        $winGif.css('width', size + '%');
 		        $winGif.css('height', size + '%');
-            $winGif.css("top", "60px");
+            $winGif.css("top", "100px");
 		        size++;
 		        setTimeout(grow, 10, size);
 		    }
@@ -302,7 +275,9 @@ $(document).on("click", ".questionOps", function(){
 
     incorrect ++;
 
-    $("#options").html("INCORRECT!");
+    $("#question").html("INCORRECT!");
+
+    $("#options").empty();
 
     $("#loseGif").show();
 
@@ -313,7 +288,7 @@ $(document).on("click", ".questionOps", function(){
 		        console.log(size);
 		        $loseGif.css('width', size + '%');
 		        $loseGif.css('height', size + '%');
-            $loseGif.css("top", "60px");
+            $loseGif.css("top", "100px");
 		        size++;
 		        setTimeout(grow, 10, size);
 		    }

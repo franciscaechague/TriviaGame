@@ -41,7 +41,12 @@ div {
 
 #question {
   font-weight: lighter;
+  margin-top:-30px;
   /*font-size: -1.5em;*/
+}
+
+#options {
+  margin-top: 30px;
 }
 
 #timer {
@@ -50,6 +55,7 @@ div {
   color: black;
   position: relative;
   bottom: 20px;
+  min-height:30px;
 }
 
 #winGif {
@@ -80,4 +86,26 @@ div {
     width: 0%;
     height: 0%;
     background-color: red;
+}
+
+.padFix{
+	padding-top: 20px;
+}
+
+.btn {
+  -webkit-border-radius: 33;
+  -moz-border-radius: 33;
+  border-radius: 33px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  border: solid #ffffff 1px;
+  text-decoration: none;
+  background-color: #BDA9FE;
+}
+
+.btn:hover {
+  background: #ffffff;
+  text-decoration: none;
 }
