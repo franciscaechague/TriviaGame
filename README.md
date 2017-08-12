@@ -14,5 +14,5 @@ Using HTML5, CSS and Javascript I created and designed a trivia game that uses t
 ![Step 1](/assets/images/step1.png?raw=true "Step 1")
 ![Step 2](/assets/images/step2.png?raw=true "Step 2")
 ![Step 3](/assets/images/step3.png?raw=true "Step 3")
-![Step 4](/assets/images/step3.png?raw=true "Step 4")
+![Step 4](/assets/images/step4.png?raw=true "Step 4")
 
